@@ -81,6 +81,3 @@ This project demonstrates the **full data science workflow**: from cleaning and 
 **Thank you for visiting and reviewing my work!** 😊  
 
 
-🎯 Conclusion
-This task provided a comprehensive opportunity to perform EDA on a real-world banking dataset, transforming raw data into meaningful insights. The analysis highlights the importance of customer segmentation and campaign timing in driving subscription rates, offering valuable perspectives for marketing strategy optimization.
-Thank you for reviewing my work! 😊
