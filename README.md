@@ -1,65 +1,84 @@
 # PRODIGY_DS_03
 # Prodigy Infotech – Data Science Internship (Task 3)
 
-<img src="Prodigy_task_03.jpg" alt="Task 3 Banner" style="width:100%; max-width:700px;">
+<img src="Prodigy_task_03.png" alt="Task 3 Banner" style="width:100%; max-width:700px;">
 
+Hi there!  
+I'm **Sarankumar**, and this repository contains my submission for **Task 3** of the **Prodigy Infotech Data Science Internship**. In this task, I built and evaluated decision tree classifiers to predict whether a customer will purchase a product or service, based on demographic and behavioral data from a real-world bank marketing dataset.
 
-Hi there!
-
-I am **Uthandam**, and this repository showcases my submission for Task 3 of the Prodigy Infotech Data Science Internship. In this task, I conducted an exploratory data analysis (EDA) on a bank marketing dataset to derive actionable insights into customer behavior and campaign effectiveness.
-
-## 📋 Problem Statement
-The objective was to analyze a bank marketing dataset to identify patterns and factors influencing customer subscription to term deposits, leveraging demographic, economic, and campaign-related data.
 ---
 
-##🌍 About the Dataset
-This project utilizes the Bank Marketing Dataset, which contains records from a Portuguese banking institution's direct marketing campaigns:
+## 📋 Problem Statement
 
-Source: Provided dataset (bank-additional.csv)
-Observations: 4,111 client records (sample subset provided)
-Key Features:
+The objective is to create a predictive model that accurately identifies which clients are likely to subscribe to a bank term deposit, using features from direct marketing campaigns carried out by a Portuguese banking institution. 
+---
 
-Demographic: age, job, marital, education
-Financial: default, housing, loan
-Campaign: contact, month, day_of_week, duration, campaign, pdays, previous, poutcome
-Economic: emp.var.rate, cons.price.idx, cons.conf.idx, euribor3m, nr.employed
-Target: y (subscription: yes/no)
+## 🌍 About the Dataset
+
+This project utilizes the **Bank Marketing Dataset** from the UCI Machine Learning Repository, widely used for direct marketing analytics:
+
+- **Source:** [UCI Repository - Bank Marketing Dataset](https://archive.ics.uci.edu/ml/datasets/bank+marketing)  
+- **Observations:** 45,211 client records  
+- **Key Features:**
+  - `age`, `job`, `marital`, `education`
+  - `default`, `balance`, `housing`, `loan`
+  - `contact`, `day`, `month`, `duration`, `campaign`, `pdays`, `previous`, `poutcome`
+  - **Target:** `y` (subscription: yes/no)
+
+---
+
+## 🧰 Tools & Libraries
+
+This project was completed in Python (Jupyter Notebook), using:
+
+- `pandas` and `numpy` for data wrangling and analysis  
+- `matplotlib` and `seaborn` for data visualization  
+- `scikit-learn` for building and evaluating machine learning models  
+
+---
+
+## 🔍 What I Did – A Quick Walkthrough
+
+### 1. **Data Exploration**
+- Loaded the dataset and reviewed its structure.
+- Summarized key statistics and checked for class balance.
+- Explored relationships between input features and the target variable using visualizations.
+
+### 2. **Data Cleaning & Preprocessing**
+- Handled missing and ambiguous values.
+- Encoded categorical features using label encoding and one-hot encoding as appropriate.
+- Standardized feature formats to prepare for modeling.
+
+### 3. **Feature Engineering**
+- Selected the most relevant features based on domain and correlation analysis.
+- Created new composite features for improved prediction (if applicable).
+
+### 4. **Model Training & Evaluation**
+- Built decision tree classifiers using both the *entropy* and *gini* criteria.
+- Experimented with models with and without depth limitation for comparison.
+- Evaluated model performance using accuracy, balanced accuracy, precision, and recall, with a focus on the minority (subscribed) class due to data imbalance.
+
+### 5. **Visualization**
+- Produced bar plots, count plots, and heatmaps to showcase trends and class distributions.
+- Visualized decision tree structures for intuitive understanding.
+
+---
+
+## 💡 Key Takeaways
+
+- **Class imbalance**: The dataset is highly skewed toward non-subscription, affecting model performance for the minority class.
+- **Key predictors**: Features like `previous outcome`, `duration`, and `contact type` strongly influence subscription likelihood.
+- **Model depth**: Shallow trees (lower max depth) offer better interpretability, but deeper trees slightly improve raw accuracy at the expense of overfitting.
+- **Improvement opportunity**: Applying balancing techniques such as class weighting or SMOTE could enhance performance for the minority class in future work.
+
+---
 
 
+## 🎯 Conclusion
 
+This project demonstrates the **full data science workflow**: from cleaning and exploring real-world data, through feature selection and engineering, to building, evaluating, and interpreting machine learning models for a practical business problem. Handling imbalanced classes and extracting actionable insights remain essential challenges in prediction-driven marketing.
 
-🧰 Tools & Libraries
-This project was executed using Python in a Jupyter Notebook environment, with:
-
-pandas and numpy for data manipulation and analysis
-matplotlib and seaborn for data visualization
-
-
-🔍 What I Did – A Quick Walkthrough
-1. Data Exploration
-
-Reviewed the dataset structure and summarized key statistics.
-Identified missing values and data distributions.
-
-2. Data Cleaning
-
-Handled missing or ambiguous entries (e.g., "unknown" values).
-Standardized data formats for consistent analysis.
-
-3. Visualization & Analysis
-
-Created bar charts to examine job and marital status distributions.
-Plotted line graphs to analyze campaign duration trends by month.
-Generated heatmaps to explore correlations between economic indicators and subscription rates.
-Used boxplots to detect outliers in age and campaign duration.
-
-
-💡 Key Takeaways
-
-Customer Segmentation: Job roles (e.g., admin, blue-collar) and marital status show varying subscription tendencies.
-Campaign Insights: Longer call durations, particularly in certain months, correlate with higher subscription rates.
-Economic Impact: Economic indicators like employment variation rate influence campaign success.
-Outliers: Age and campaign duration contain outliers that may affect analysis outcomes.
+**Thank you for visiting and reviewing my work!** 😊  
 
 
 🎯 Conclusion
